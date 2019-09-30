@@ -99,7 +99,7 @@
         <!-- /.container -->
       </div>
       <!-- /.content-wrapper -->
-      <footer class="main-footer">
+      <footer class="main-footer hidden-print">
         <div class="container">
           <div class="pull-right hidden-xs">
             <b>Version</b> 1.0

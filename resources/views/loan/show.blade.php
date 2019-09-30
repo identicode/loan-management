@@ -9,7 +9,7 @@
 
 @section('page-title')
 Payment List
-<button class="btn btn-flat bg-purple pull-right"> <i class="fa fa-print"></i> Print</button>
+<button onclick="javascript:window.print()" class="btn btn-flat bg-purple pull-right"> <i class="fa fa-print"></i> Print</button>
 @endsection
 
 @section('main-content')
@@ -57,9 +57,9 @@ Payment List
                     <li class="list-group-item">
                         <b>Borrower Name</b> <a class="pull-right">{{ $loan->borrower->fname." ".$loan->borrower->lname }}</a>
                     </li>
-                    <li class="list-group-item">
+                    {{-- <li class="list-group-item">
                         <b>Borrower Address</b> <a class="pull-right">{{ $loan->borrower->address }}</a>
-                    </li>
+                    </li> --}}
                     <li class="list-group-item">
                         <b>Principal Amount</b> <a class="pull-right">₱ {{ readable_amount($loan->principal_amount) }}</a>
                     </li>
@@ -70,7 +70,14 @@ Payment List
                         <b>Total Amount</b> <a class="pull-right">₱ {{ readable_amount($loan->total_amount) }}</a>
                     </li>
                     <li class="list-group-item">
-                        <b>Remaining Balance</b> <a class="pull-right">₱ {{ readable_amount($loan->total_amount - $loan->payments->sum('amount')) }}</a>
+                        <b>Remaining Balance</b> 
+                        <a class="pull-right">
+                            @if($loan->total_amount - $loan->payments->sum('amount') != 0)
+                            ₱ {{ readable_amount($loan->total_amount - $loan->payments->sum('amount')) }}
+                            @else
+                            PAID
+                            @endif
+                        </a>
                     </li>
                 </ul>
             </div>  
