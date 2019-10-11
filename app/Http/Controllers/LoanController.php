@@ -54,6 +54,7 @@ class LoanController extends Controller
 
         Loan::create([
             'borrower_id' => $id,
+            'description' => $request->principalDesc,
             'principal_amount' => $request->principalAmount,
             'interest' => $interest,
             'total_amount' => $total_amount

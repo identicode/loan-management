@@ -17,6 +17,7 @@ class CreateLoansTable extends Migration
             $table->bigIncrements('id');
             $table->integer('borrower_id');
             $table->float('principal_amount');
+            $table->string('description');
             $table->string('interest');
             $table->float('total_amount');
             $table->timestamps();

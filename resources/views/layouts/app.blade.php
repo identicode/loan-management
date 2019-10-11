@@ -46,7 +46,7 @@
         <nav class="navbar navbar-static-top">
           <div class="container">
             <div class="navbar-header">
-              <a href="/" class="navbar-brand">LOAN MANAGEMENT</a>
+              <a href="/" class="navbar-brand">AMV STORE | LOAN MANAGEMENT</a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <i class="fa fa-bars"></i>
               </button>
@@ -104,7 +104,7 @@
           <div class="pull-right hidden-xs">
             <b>Version</b> 1.0
           </div>
-          <strong>Developed By:</strong> Jimwell Pariñas
+          <strong>Developed By:</strong> <a target="_new" href="https://jmprns.netlify.com">JMPRNS</a>
         </div>
         <!-- /.container -->
       </footer>

@@ -30,6 +30,13 @@
                     @csrf
 
                     <div class="form-group">
+                        <label for="lastName" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="principalDesc" id="principalDesc" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="lastName" class="col-sm-2 control-label">Principal Amount</label>
                         <div class="col-sm-6">
                             <input type="number" step="0.01" class="form-control" name="principalAmount" id="principalAmount" required>

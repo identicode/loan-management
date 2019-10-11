@@ -34,6 +34,7 @@
                     <table id="dataTables" class="table table-stripped table-hover table-bordered">
                         <thead>
                             <th>Date</th>
+                            <th>Description</th>
                             <th>Principal Amount</th>
                             <th>Interest</th>
                             <th>Total Amount</th>
@@ -53,6 +54,7 @@
                             @endphp
                                 <tr @if($balance == 0) class="bg-olive" @endif>
                                     <td>{{ $loan->created_at }}</td>
+                                    <td>{{ $loan->description }}</td>
                                     <td>₱ {{ readable_amount($loan->principal_amount) }}</td>
                                     <td>{{ $loan->interest }}</td>
                                     <td>₱ {{ readable_amount($loan->total_amount) }}</td>
